@@ -6,16 +6,50 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CustomerCardHero from "$lib/components/layout/hero-sections/CustomerCardHero.svelte";
 </script>
 
-<Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="https://www.unc.mn/image-placeholder.svg"
-	generating
+<CustomerCardHero
+	centered={true}
+	title="Trusted by leading hospital administrators optimizing OR performance"
+	subtitle="Automated surgical documentation and real-time OR coordination that reduces turnaround time by 45% and captures the $240B operating room market."
+	customers={[
+		{
+			name: "Dr. Michael Harrison",
+			position: "Hospital Administrator",
+			imageSrc: "/generated/image-professional-male-hospital-administrator.webp"
+		},
+		{
+			name: "Dr. Sarah Chen",
+			position: "OR Director",
+			imageSrc: "/generated/image-confident-female-operating-room-director.webp"
+		},
+		{
+			name: "James Rodriguez",
+			position: "Healthcare CFO",
+			imageSrc: "/generated/image-experienced-male-healthcare-cfo-in-a-hos.webp"
+		},
+		{
+			name: "Dr. Emily Watson",
+			position: "Surgery Coordinator",
+			imageSrc: "/generated/image-professional-female-surgery-coordinator-.webp"
+		},
+		{
+			name: "Robert Thompson",
+			position: "Operations Manager",
+			imageSrc: "/generated/image-senior-male-operations-manager-walking-t.webp"
+		}
+	]}
 />
-<LogoScroller label="" generating />
+<LogoScroller
+	label="Trusted by leading healthcare systems"
+	logoUrls={[
+		'https://cdn.brandfetch.io/mayoclinic.org/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/clevelandclinic.org/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/massgeneral.org/w/400/h/400/logo',
+		'https://cdn.brandfetch.io/hopkinsmedicine.org/w/400/h/400/logo'
+	]}
+/>
 
 <Summary
 	generating
